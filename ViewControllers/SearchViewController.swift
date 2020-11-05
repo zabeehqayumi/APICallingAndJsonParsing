@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var searchTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
