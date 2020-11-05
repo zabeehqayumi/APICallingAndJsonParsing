@@ -82,6 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				513767782553E77400DA87E0 /* APICallingAndJsonParsing */,
+				513767AF2553E88F00DA87E0 /* ViewControllers */,
+				513767B22553E8C300DA87E0 /* ViewModels */,
+				513767B32553E8D000DA87E0 /* Models */,
+				513767B12553E8B300DA87E0 /* Views */,
+				513767B42553E8DB00DA87E0 /* Worker */,
+				513767B52553E90D00DA87E0 /* SupportingFiles */,
 				513767922553E77700DA87E0 /* APICallingAndJsonParsingTests */,
 				5137679D2553E77700DA87E0 /* APICallingAndJsonParsingUITests */,
 				513767772553E77400DA87E0 /* Products */,
@@ -103,12 +109,7 @@
 			children = (
 				513767792553E77400DA87E0 /* AppDelegate.swift */,
 				5137677B2553E77400DA87E0 /* SceneDelegate.swift */,
-				5137677D2553E77400DA87E0 /* ViewController.swift */,
-				5137677F2553E77400DA87E0 /* Main.storyboard */,
-				513767852553E77700DA87E0 /* Assets.xcassets */,
-				513767872553E77700DA87E0 /* LaunchScreen.storyboard */,
 				5137678A2553E77700DA87E0 /* Info.plist */,
-				513767822553E77400DA87E0 /* APICallingAndJsonParsing.xcdatamodeld */,
 			);
 			path = APICallingAndJsonParsing;
 			sourceTree = "<group>";
@@ -129,6 +130,53 @@
 				513767A02553E77700DA87E0 /* Info.plist */,
 			);
 			path = APICallingAndJsonParsingUITests;
+			sourceTree = "<group>";
+		};
+		513767AF2553E88F00DA87E0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5137677D2553E77400DA87E0 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		513767B12553E8B300DA87E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5137677F2553E77400DA87E0 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		513767B22553E8C300DA87E0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		513767B32553E8D000DA87E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		513767B42553E8DB00DA87E0 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		513767B52553E90D00DA87E0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				513767852553E77700DA87E0 /* Assets.xcassets */,
+				513767872553E77700DA87E0 /* LaunchScreen.storyboard */,
+				513767822553E77400DA87E0 /* APICallingAndJsonParsing.xcdatamodeld */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
