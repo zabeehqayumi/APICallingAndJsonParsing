@@ -6,15 +6,76 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var booksSearchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
+    
+    lazy var viewModel = SearchViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let lbl = UILabel(frame: CGRect(x: 100, y: 100, width: 200, height: 100))
-        lbl.text = "dummy text 1"
-        self.view.addSubview(lbl)
+        self.searchTableView.delegate = self
+        self.searchTableView.dataSource = self
+        self.viewModel.delegate = self
+
+        registerTableViewCells()
+    }
+    
+    func registerTableViewCells () {
+        searchTableView.register(UINib(nibName: "BookDisplayTableViewCell", bundle: nil), forCellReuseIdentifier: "BookDisplayTableViewCell")
     }
 }
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource, MyCellDelegate {
+    
+    func favoriteItem(cell: BookDisplayTableViewCell) {
+        if let bookName = cell.bookTitles.text {
+            self.viewModel.favoriteItemsAtindexPath(bookName: bookName)
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNumberOfBooks() ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var myCell = UITableViewCell()
+        if let cell = searchTableView.dequeueReusableCell(withIdentifier: "BookDisplayTableViewCell") as? BookDisplayTableViewCell {
+            cell.bookTitles.text = viewModel.getBookTitle(at: indexPath.row)
+            
+            if let imageString = viewModel.getBookThumbnail(at: indexPath.row) {
+                cell.bookImages.kf.setImage(with: URL(string: imageString))
+            }
+            
+            if let authorName = viewModel.getAuthorName(at: indexPath.row) {
+                cell.authorsLabel.text = "Author: " + authorName
+            }
+            cell.delegate = self
+            myCell = cell
+        }
+        return myCell
+    }
+}
+
+extension SearchViewController: HomeViewModelDelegate, UISearchBarDelegate {
+    
+    func booksUpdated() {
+        DispatchQueue.main.async {
+            self.searchTableView.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
+
+        viewModel.search(text: text)
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+    }
+}
+
+
