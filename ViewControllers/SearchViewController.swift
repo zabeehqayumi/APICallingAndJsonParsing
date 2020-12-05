@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     
     lazy var viewModel = SearchViewModel()
+    var imagesArray = [String]()
+    var imageIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, MyCe
     
     func favoriteItem(cell: BookDisplayTableViewCell) {
         if let bookName = cell.bookTitles.text {
-            self.viewModel.favoriteItemsAtindexPath(bookName: bookName)
+            self.viewModel.favoriteBookNameAtIndexPath(bookName: bookName)
         }
+        
+        guard let indexPath = searchTableView.indexPath(for: cell) else { return }
+        imageIndex = indexPath.row
+        self.viewModel.favoriteImageLink(imageUrl: imagesArray[indexPath.row])
     }
     
     
@@ -45,9 +51,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, MyCe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var myCell = UITableViewCell()
         if let cell = searchTableView.dequeueReusableCell(withIdentifier: "BookDisplayTableViewCell") as? BookDisplayTableViewCell {
+            
+            cell.favoritebutton.tag = indexPath.row
             cell.bookTitles.text = viewModel.getBookTitle(at: indexPath.row)
             
             if let imageString = viewModel.getBookThumbnail(at: indexPath.row) {
+                imagesArray.append(imageString)
                 cell.bookImages.kf.setImage(with: URL(string: imageString))
             }
             

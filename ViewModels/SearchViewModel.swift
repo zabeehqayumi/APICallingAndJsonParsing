@@ -50,7 +50,7 @@ class SearchViewModel {
         return author ?? ""
     }
     
-    func favoriteItemsAtindexPath(bookName: String) {
+    func favoriteBookNameAtIndexPath(bookName: String) {
         
         var favoritesList = [String]()
         let defaults = UserDefaults.standard
@@ -61,6 +61,19 @@ class SearchViewModel {
         
         favoritesList.append(bookName)
         defaults.set(favoritesList, forKey: "favorites")
+        defaults.synchronize()
+    }
+    
+    func favoriteImageLink(imageUrl: String) {
+        var imageList = [String]()
+        let defaults = UserDefaults.standard
+        
+        if let imageDefautls = defaults.object(forKey: "imageStrings") {
+            imageList = imageDefautls as? [String] ?? []
+        }
+        
+        imageList.append(imageUrl)
+        defaults.set(imageList, forKey: "imageStrings")
         defaults.synchronize()
     }
 }

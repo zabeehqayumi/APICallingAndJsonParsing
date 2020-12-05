@@ -7,3 +7,27 @@
 
 import Foundation
 
+class FavoriteViewModel {
+    var favorites = [String]()
+    var favoritesImagesArray = [String]()
+    
+    func fetchingBookNames() {
+        let defaults = UserDefaults.standard
+        if let favoritedData = defaults.object(forKey: "favorites") {
+            favorites = favoritedData as? [String] ?? []
+        }
+    }
+    
+    func refreshData() {
+        favorites = []
+        fetchingBookNames()
+        fetchBooksImageString()
+    }
+    
+    func fetchBooksImageString() {
+        let defaults = UserDefaults.standard
+        if let favoritedImages = defaults.object(forKey: "imageStrings") {
+            favoritesImagesArray = favoritedImages as? [String] ?? []
+        }
+    }
+}

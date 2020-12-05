@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		513767E52553F28200DA87E0 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513767E42553F28200DA87E0 /* BookModel.swift */; };
 		513767EB2553F2F200DA87E0 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513767EA2553F2F200DA87E0 /* ParseJson.swift */; };
 		5174A15F2573593C005C1D6F /* Arrary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A15E2573593C005C1D6F /* Arrary+Extension.swift */; };
+		5174A1A325760B4A005C1D6F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A1A125760B49005C1D6F /* FavoritesTableViewCell.swift */; };
+		5174A1A425760B4A005C1D6F /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5174A1A225760B49005C1D6F /* FavoritesTableViewCell.xib */; };
 		D33BC98CDB3FEBC35C2D5C92 /* Pods_APICallingAndJsonParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31359066203D8A38224904CE /* Pods_APICallingAndJsonParsing.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		513767E42553F28200DA87E0 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		513767EA2553F2F200DA87E0 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		5174A15E2573593C005C1D6F /* Arrary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Arrary+Extension.swift"; sourceTree = "<group>"; };
+		5174A1A125760B49005C1D6F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		5174A1A225760B49005C1D6F /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		99423348F03D3656AB2C8C60 /* Pods-APICallingAndJsonParsing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallingAndJsonParsing.debug.xcconfig"; path = "Target Support Files/Pods-APICallingAndJsonParsing/Pods-APICallingAndJsonParsing.debug.xcconfig"; sourceTree = "<group>"; };
 		CA6AECA9DF5C30B46307861A /* Pods-APICallingAndJsonParsing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallingAndJsonParsing.release.xcconfig"; path = "Target Support Files/Pods-APICallingAndJsonParsing/Pods-APICallingAndJsonParsing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +221,8 @@
 			children = (
 				513767D02553ED8A00DA87E0 /* BookDisplayTableViewCell.swift */,
 				513767D12553ED8A00DA87E0 /* BookDisplayTableViewCell.xib */,
+				5174A1A125760B49005C1D6F /* FavoritesTableViewCell.swift */,
+				5174A1A225760B49005C1D6F /* FavoritesTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -227,7 +233,6 @@
 				99423348F03D3656AB2C8C60 /* Pods-APICallingAndJsonParsing.debug.xcconfig */,
 				CA6AECA9DF5C30B46307861A /* Pods-APICallingAndJsonParsing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -347,6 +352,7 @@
 				513767892553E77700DA87E0 /* LaunchScreen.storyboard in Resources */,
 				513767D32553ED8A00DA87E0 /* BookDisplayTableViewCell.xib in Resources */,
 				513767862553E77700DA87E0 /* Assets.xcassets in Resources */,
+				5174A1A425760B4A005C1D6F /* FavoritesTableViewCell.xib in Resources */,
 				513767812553E77400DA87E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +429,7 @@
 				5174A15F2573593C005C1D6F /* Arrary+Extension.swift in Sources */,
 				5137677A2553E77400DA87E0 /* AppDelegate.swift in Sources */,
 				513767842553E77400DA87E0 /* APICallingAndJsonParsing.xcdatamodeld in Sources */,
+				5174A1A325760B4A005C1D6F /* FavoritesTableViewCell.swift in Sources */,
 				513767CB2553EC5F00DA87E0 /* FavoriteViewController.swift in Sources */,
 				513767EB2553F2F200DA87E0 /* ParseJson.swift in Sources */,
 				5137677C2553E77400DA87E0 /* SceneDelegate.swift in Sources */,
