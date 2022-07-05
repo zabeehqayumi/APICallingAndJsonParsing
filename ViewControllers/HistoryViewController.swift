@@ -33,6 +33,4 @@ extension HistoryViewController: UICollectionViewDataSource, UICollectionViewDel
         cell.backgroundColor = .blue
         return cell
     }
-    
-    
 }
