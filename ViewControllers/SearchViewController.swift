@@ -9,10 +9,12 @@ import UIKit
 import Kingfisher
 
 class SearchViewController: UIViewController {
-
+    
     @IBOutlet weak var booksSearchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
     
+    let activityView = UIActivityIndicatorView(style: .large)
+
     lazy var viewModel = SearchViewModel()
     var imagesArray = [String]()
     var imageIndex: Int = 0
@@ -22,8 +24,13 @@ class SearchViewController: UIViewController {
         self.searchTableView.delegate = self
         self.searchTableView.dataSource = self
         self.viewModel.delegate = self
-
         registerTableViewCells()
+    }
+    
+    func showActivityIndicatory() {
+        activityView.center = self.view.center
+        self.view.addSubview(activityView)
+        activityView.startAnimating()
     }
     
     func registerTableViewCells () {
@@ -75,15 +82,17 @@ extension SearchViewController: HomeViewModelDelegate, UISearchBarDelegate {
     func booksUpdated() {
         DispatchQueue.main.async {
             self.searchTableView.reloadData()
+            self.activityView.stopAnimating()
         }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return }
-
+        
         viewModel.search(text: text)
         searchBar.resignFirstResponder()
         searchBar.text = ""
+        showActivityIndicatory()
     }
 }
 

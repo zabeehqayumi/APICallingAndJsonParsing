@@ -27,6 +27,8 @@
 		5174A15F2573593C005C1D6F /* Arrary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A15E2573593C005C1D6F /* Arrary+Extension.swift */; };
 		5174A1A325760B4A005C1D6F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A1A125760B49005C1D6F /* FavoritesTableViewCell.swift */; };
 		5174A1A425760B4A005C1D6F /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5174A1A225760B49005C1D6F /* FavoritesTableViewCell.xib */; };
+		519AC5342873BA4F002659EC /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC5332873BA4F002659EC /* APIEndPoints.swift */; };
+		519AC53A287415E3002659EC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC539287415E3002659EC /* HistoryViewController.swift */; };
 		D33BC98CDB3FEBC35C2D5C92 /* Pods_APICallingAndJsonParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31359066203D8A38224904CE /* Pods_APICallingAndJsonParsing.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		5174A15E2573593C005C1D6F /* Arrary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Arrary+Extension.swift"; sourceTree = "<group>"; };
 		5174A1A125760B49005C1D6F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		5174A1A225760B49005C1D6F /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		519AC5332873BA4F002659EC /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		519AC539287415E3002659EC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		99423348F03D3656AB2C8C60 /* Pods-APICallingAndJsonParsing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallingAndJsonParsing.debug.xcconfig"; path = "Target Support Files/Pods-APICallingAndJsonParsing/Pods-APICallingAndJsonParsing.debug.xcconfig"; sourceTree = "<group>"; };
 		CA6AECA9DF5C30B46307861A /* Pods-APICallingAndJsonParsing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallingAndJsonParsing.release.xcconfig"; path = "Target Support Files/Pods-APICallingAndJsonParsing/Pods-APICallingAndJsonParsing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +171,7 @@
 				5137677D2553E77400DA87E0 /* ViewController.swift */,
 				513767C52553EC4C00DA87E0 /* SearchViewController.swift */,
 				513767CA2553EC5F00DA87E0 /* FavoriteViewController.swift */,
+				519AC539287415E3002659EC /* HistoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				513767872553E77700DA87E0 /* LaunchScreen.storyboard */,
 				513767822553E77400DA87E0 /* APICallingAndJsonParsing.xcdatamodeld */,
 				5174A15E2573593C005C1D6F /* Arrary+Extension.swift */,
+				519AC5332873BA4F002659EC /* APIEndPoints.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -423,6 +429,8 @@
 				513767E52553F28200DA87E0 /* BookModel.swift in Sources */,
 				513767E02553F26F00DA87E0 /* FavoriteViewModel.swift in Sources */,
 				513767D22553ED8A00DA87E0 /* BookDisplayTableViewCell.swift in Sources */,
+				519AC53A287415E3002659EC /* HistoryViewController.swift in Sources */,
+				519AC5342873BA4F002659EC /* APIEndPoints.swift in Sources */,
 				513767C62553EC4C00DA87E0 /* SearchViewController.swift in Sources */,
 				513767DB2553F26200DA87E0 /* SearchViewModel.swift in Sources */,
 				5137677E2553E77400DA87E0 /* ViewController.swift in Sources */,

@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 final class ParseJson {
+    
     typealias success = (BookModel) -> ()
     static func jsonFile(bookName: String, onSuccess: @escaping success) {
         let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(bookName)")
@@ -20,5 +22,20 @@ final class ParseJson {
                 print("json error")
             }
         }.resume()
+    }
+    
+    static func downloadImage(url: String, completion: @escaping (UIImage?) ->()) {
+        let url = URL(string: url)!
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let httpURLResponse = response as? HTTPURLResponse,
+                  httpURLResponse.statusCode == 200,
+                  let data = data, error == nil,
+                  let image = UIImage(data: data) else {
+                completion(nil)
+                return
+            }
+            completion(image)
+        }.resume()
+        
     }
 }

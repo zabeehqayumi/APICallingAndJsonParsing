@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
-
-protocol HomeViewModelDelegate: class {
+protocol HomeViewModelDelegate: AnyObject {
     func booksUpdated()
 }
 
