@@ -11,19 +11,11 @@ import Kingfisher
 class FavoriteViewController: UIViewController {
     
     lazy var viewModel = FavoriteViewModel()
-
+    
     @IBOutlet weak var favoritesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        UserDefaults.standard.removeObject(forKey: "favorites")
-//        UserDefaults.standard.synchronize()
-//        viewModel.favorites.removeAll()
-//
-//        UserDefaults.standard.removeObject(forKey: "imageStrings")
-//        UserDefaults.standard.synchronize()
-//        viewModel.favoritesImagesArray.removeAll()
         
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
@@ -41,6 +33,18 @@ class FavoriteViewController: UIViewController {
     
     func registerTableViewCells() {
         favoritesTableView.register(UINib(nibName: "FavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoritesTableViewCell")
+    }
+    
+    @IBAction func deleteItemsTapped(_ sender: Any) {
+        
+        UserDefaults.standard.removeObject(forKey: "favorites")
+        UserDefaults.standard.synchronize()
+        viewModel.favorites.removeAll()
+        
+        UserDefaults.standard.removeObject(forKey: "imageStrings")
+        UserDefaults.standard.synchronize()
+        viewModel.favoritesImagesArray.removeAll()
+        favoritesTableView.reloadData()
     }
 }
 

@@ -37,14 +37,33 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" id="ZN0-b1-DjV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Favorited Items" id="KnS-Oy-h1V">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="trash" id="DSX-cp-VmW">
+                                            <connections>
+                                                <action selector="deleteItemsTapped:" destination="L1A-y8-Kaw" id="AhU-ux-BD8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ovs-Wp-Qm1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ovs-Wp-Qm1" firstAttribute="trailing" secondItem="wLI-QH-JWa" secondAttribute="trailing" id="0Gw-BX-xEe"/>
+                            <constraint firstItem="wLI-QH-JWa" firstAttribute="leading" secondItem="ovs-Wp-Qm1" secondAttribute="leading" id="3BW-D2-T5c"/>
+                            <constraint firstItem="wLI-QH-JWa" firstAttribute="bottom" secondItem="ovs-Wp-Qm1" secondAttribute="bottom" id="4r3-Lj-MYX"/>
                             <constraint firstItem="ovs-Wp-Qm1" firstAttribute="bottom" secondItem="wLI-QH-JWa" secondAttribute="bottom" id="8Q5-hb-k6s"/>
+                            <constraint firstItem="wLI-QH-JWa" firstAttribute="bottom" secondItem="ovs-Wp-Qm1" secondAttribute="bottom" id="Bph-zb-zEz"/>
                             <constraint firstItem="wLI-QH-JWa" firstAttribute="leading" secondItem="ovs-Wp-Qm1" secondAttribute="leading" id="Ebf-sV-v7r"/>
-                            <constraint firstItem="wLI-QH-JWa" firstAttribute="top" secondItem="ovs-Wp-Qm1" secondAttribute="top" id="G2a-9x-VZd"/>
+                            <constraint firstItem="ovs-Wp-Qm1" firstAttribute="trailing" secondItem="wLI-QH-JWa" secondAttribute="trailing" id="Frw-7B-7fW"/>
+                            <constraint firstItem="ovs-Wp-Qm1" firstAttribute="trailing" secondItem="wLI-QH-JWa" secondAttribute="trailing" id="ecN-ot-RNR"/>
+                            <constraint firstItem="wLI-QH-JWa" firstAttribute="top" secondItem="ZN0-b1-DjV" secondAttribute="top" id="gfb-oF-zYz"/>
+                            <constraint firstItem="wLI-QH-JWa" firstAttribute="leading" secondItem="ovs-Wp-Qm1" secondAttribute="leading" id="mEB-0A-jSl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="Szi-UG-fVk"/>
@@ -54,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sz1-yC-jYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="300"/>
+            <point key="canvasLocation" x="769.56521739130437" y="300"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="7fm-vf-1Ab">

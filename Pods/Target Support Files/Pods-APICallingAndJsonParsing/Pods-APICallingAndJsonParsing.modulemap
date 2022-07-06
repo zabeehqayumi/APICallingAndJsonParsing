@@ -1,0 +1,6 @@
+framework module Pods_APICallingAndJsonParsing {
+  umbrella header "Pods-APICallingAndJsonParsing-umbrella.h"
+
+  export *
+  module * { export * }
+}
