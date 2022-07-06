@@ -58,7 +58,7 @@ extension HistoryViewController: UICollectionViewDataSource, UICollectionViewDel
         return myCell
     }
 }
-
+/// Mark:- Data source / delegate
 extension HistoryViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -74,5 +74,20 @@ extension HistoryViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+extension HistoryViewController {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(HistoryHeaderView.self)", for: indexPath)
+            guard let historyHeaderView = headerView as? HistoryHeaderView else { return headerView }
+            let item = favViewModel.favorites.randomElement()
+            historyHeaderView.titleLabel.text = item
+            return historyHeaderView
+        default:
+            assert(false, "Invalid")
+        }
     }
 }

@@ -31,6 +31,7 @@
 		519AC53A287415E3002659EC /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC539287415E3002659EC /* HistoryViewController.swift */; };
 		519AC53D28753996002659EC /* HistoryCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC53B28753996002659EC /* HistoryCellCollectionViewCell.swift */; };
 		519AC53E28753996002659EC /* HistoryCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519AC53C28753996002659EC /* HistoryCellCollectionViewCell.xib */; };
+		519AC545287550EB002659EC /* HistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AC544287550EB002659EC /* HistoryHeaderView.swift */; };
 		D33BC98CDB3FEBC35C2D5C92 /* Pods_APICallingAndJsonParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31359066203D8A38224904CE /* Pods_APICallingAndJsonParsing.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		519AC539287415E3002659EC /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		519AC53B28753996002659EC /* HistoryCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		519AC53C28753996002659EC /* HistoryCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		519AC544287550EB002659EC /* HistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryHeaderView.swift; sourceTree = "<group>"; };
 		99423348F03D3656AB2C8C60 /* Pods-APICallingAndJsonParsing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallingAndJsonParsing.debug.xcconfig"; path = "Target Support Files/Pods-APICallingAndJsonParsing/Pods-APICallingAndJsonParsing.debug.xcconfig"; sourceTree = "<group>"; };
 		CA6AECA9DF5C30B46307861A /* Pods-APICallingAndJsonParsing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallingAndJsonParsing.release.xcconfig"; path = "Target Support Files/Pods-APICallingAndJsonParsing/Pods-APICallingAndJsonParsing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +185,7 @@
 		513767B12553E8B300DA87E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				519AC53F28754910002659EC /* HeaderViews */,
 				513767CF2553ED4D00DA87E0 /* TableViewCells */,
 				5137677F2553E77400DA87E0 /* Main.storyboard */,
 			);
@@ -237,6 +240,14 @@
 				519AC53C28753996002659EC /* HistoryCellCollectionViewCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		519AC53F28754910002659EC /* HeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				519AC544287550EB002659EC /* HistoryHeaderView.swift */,
+			);
+			path = HeaderViews;
 			sourceTree = "<group>";
 		};
 		5D1D0B44590707697EF4DD0F /* Pods */ = {
@@ -434,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				513767E52553F28200DA87E0 /* BookModel.swift in Sources */,
+				519AC545287550EB002659EC /* HistoryHeaderView.swift in Sources */,
 				513767E02553F26F00DA87E0 /* FavoriteViewModel.swift in Sources */,
 				513767D22553ED8A00DA87E0 /* BookDisplayTableViewCell.swift in Sources */,
 				519AC53A287415E3002659EC /* HistoryViewController.swift in Sources */,
